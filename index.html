@@ -189,12 +189,11 @@ transition:opacity 0.25s ease, transform 0.25s ease;
 </head>
 <body class="antialiased">
 
-<!-- Header (Modified for Mobile Menu) -->
+<!-- Header (Mobile Menu Ready) -->
 <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-black/60 border-b border-white/5">
   <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between relative">
     <a href="#top" class="font-display text-lg tracking-wide-jp">Liminoid</a>
     
-    <!-- デスクトップ用ナビ -->
     <nav class="hidden md:flex gap-8 text-sm text-[var(--ink-dim)] items-center">
       <a href="#profile" class="nav-link hover:text-[var(--ink)] transition-colors">Profile</a>
       <a href="#expertise" class="nav-link hover:text-[var(--ink)] transition-colors">対応領域</a>
@@ -205,7 +204,6 @@ transition:opacity 0.25s ease, transform 0.25s ease;
     
     <div class="flex items-center gap-3 sm:gap-4">
       <a href="#contact" class="text-[10px] sm:text-xs border border-[var(--red)] text-[var(--red)] px-3 py-1.5 rounded-full tracking-wide-jp hover:bg-[var(--red)] hover:text-black transition-colors">お問い合わせ</a>
-      <!-- モバイル用ハンバーガーボタン -->
       <button id="menu-btn" class="md:hidden text-[var(--ink)] focus:outline-none flex items-center" aria-label="メニューを開く">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -214,7 +212,6 @@ transition:opacity 0.25s ease, transform 0.25s ease;
     </div>
   </div>
 
-  <!-- モバイル用ドロワーメニュー -->
   <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[var(--surface)] border-b border-[var(--line)] px-6 py-5 shadow-xl">
     <div class="flex flex-col gap-4">
       <a href="#profile" class="mobile-link text-sm text-[var(--ink-dim)] hover:text-[var(--ink)]">Profile</a>
@@ -226,19 +223,49 @@ transition:opacity 0.25s ease, transform 0.25s ease;
   </div>
 </header>
 
-<!-- Hero -->
-<section id="top" class="relative pt-36 pb-20 px-6 overflow-hidden washi">
-<div class="max-w-5xl mx-auto relative">
-<p class="text-[var(--red)] text-xs tracking-wider-jp mb-5">OFFICIAL PAGE</p>
-<h1 class="font-display text-5xl sm:text-7xl leading-[1.1] tracking-wide-jp mb-4">Liminoid</h1>
-<p class="text-[var(--ink-dim)] text-sm sm:text-base tracking-wide-jp mb-10">BizDev・新規事業・組織開発・採用・ブランディング・PR・マーケ・セールス・デジタルID関連・その他起業家支援等を行っています。</p>
+<!-- Hero Section with New CSS/SVG Visuals -->
+<section id="top" class="relative pt-40 pb-28 px-6 overflow-hidden washi">
+  
+  <!-- CSS Background Elements for KV -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="absolute -top-[10%] -right-[10%] w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] rounded-full bg-[var(--red)] opacity-[0.12] blur-[80px] sm:blur-[120px] transition-transform duration-1000"></div>
+    <div class="absolute -bottom-[20%] -left-[10%] w-[400px] sm:w-[700px] h-[400px] sm:h-[700px] rounded-full bg-[var(--red-deep)] opacity-[0.15] blur-[100px] sm:blur-[150px]"></div>
+    <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+  </div>
 
-<div class="flex flex-col gap-y-2 border-t border-[var(--line)] pt-5 text-xs sm:text-sm text-[var(--ink-dim)]">
-      <span class="text-[var(--ink)]">代表：松崎 雄汰</span>
+  <div class="max-w-5xl mx-auto relative z-10">
+    <p class="text-[var(--red)] text-xs font-bold tracking-wider-jp mb-6 flex items-center gap-3">
+      <span class="w-6 h-px bg-[var(--red)] inline-block"></span>
+      OFFICIAL PORTFOLIO
+    </p>
+    <h1 class="font-display text-6xl sm:text-8xl leading-none tracking-wide-jp mb-6 text-white drop-shadow-md">
+      Liminoid
+    </h1>
+    
+    <p class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f4f1ea] to-[#a39d8f] text-xl sm:text-2xl font-bold tracking-wide-jp mb-6 leading-relaxed">
+      ビジネスと社会を繋ぎ、<br class="sm:hidden">事業の次の一歩を形にする。
+    </p>
+    
+    <p class="text-[var(--ink-dim)] text-sm sm:text-base tracking-wide-jp mb-12 leading-loose max-w-2xl bg-black/20 p-4 sm:p-0 rounded-xl sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none border border-white/5 sm:border-none">
+      行政（デジタル庁）におけるインフラ構築から、スタートアップでの事業開発・社会課題解決まで。多様な組織を横断してきた経験を活かし、BizDevや新規事業の立ち上げ、組織づくりに柔軟に伴走します。<br class="hidden sm:block">
+      戦略を描くだけでなく、クライアントのチームの一員として実務に寄り添い、確かな成長をサポートします。
+    </p>
+
+    <div class="flex flex-col sm:flex-row sm:items-center gap-y-3 gap-x-6 border-l-2 border-[var(--red)] pl-4 text-xs sm:text-sm text-[var(--ink-dim)]">
+      <span class="text-[var(--ink)] font-medium">代表：松崎 雄汰</span>
+      <span class="hidden sm:inline text-[var(--line)]">|</span>
       <span>デジタル庁 政策推進スペシャリスト</span>
+      <span class="hidden sm:inline text-[var(--line)]">|</span>
       <span>株式会社Ridilover</span>
     </div>
-</div>
+  </div>
 </section>
 
 <main class="max-w-5xl mx-auto px-6">
@@ -257,7 +284,15 @@ transition:opacity 0.25s ease, transform 0.25s ease;
 </div>
 <div class="bg-[var(--surface)] border border-[var(--line)] rounded-2xl p-6 sm:p-8 leading-loose text-[var(--ink)]/90 text-sm sm:text-[15px]">
 <p>代表の松崎は、デジタル庁 国民向けサービスグループにてデジタル認証アプリ（デジタル認証サービス／マイナアプリ）を担当。マイナンバーカードを活用した本人確認・個人認証インフラの構築・普及促進に従事。障害者雇用コンサルティングのD&amp;I、eKYC・デジタルアイデンティティソリューションのTRUSTDOCK、社会課題解決・コンサルティングのRidiloverを経て、現職。</p>
-<p class="mt-4">その他、新規事業開発・組織開発・BizDev・採用支援や起業家支援等にも携わる。</p>
+<p class="mt-4">
+その他、新規事業開発・組織開発・BizDev・採用支援や起業家支援等にも携わります。
+</p>
+<p class="mt-4 text-[var(--ink)] font-medium">
+■ 支援におけるスタンス
+</p>
+<p class="mt-2">
+外部からのアドバイスに留まらず、クライアントの皆様と同じ目線に立ち、実務の細部まで寄り添うパートナーであることを大切にしています。行政と民間、ビジネスと社会課題といった異なる領域を横断する知見を活かし、長期的な視点で価値を生み出すお手伝いをさせていただきます。
+</p>
 </div>
 </div>
 </section>
@@ -270,26 +305,45 @@ transition:opacity 0.25s ease, transform 0.25s ease;
 <span class="ln"></span>
 </div>
 <div class="grid sm:grid-cols-2 gap-4">
+
+<!-- 事業構築・グロース領域（メイン） -->
 <div class="link-btn rounded-xl p-5">
-<p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">BUSINESS DEVELOPMENT</p>
-<p class="text-sm leading-relaxed">BizDev全般の企画・設計・実行支援（セールス、マーケティング、オペレーション等）</p>
+  <p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">BUSINESS DEVELOPMENT</p>
+  <h3 class="font-display text-base text-[var(--ink)] mb-1.5">事業開発・グロース支援</h3>
+  <p class="text-sm leading-relaxed text-[var(--ink-dim)]">「事業をどうスケールさせるか壁打ちしたい」「営業・マーケティングの戦略から実務までサポートしてほしい」といった企業様の課題に、フェーズに合わせて柔軟に伴走します。</p>
 </div>
+
 <div class="link-btn rounded-xl p-5">
-<p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">NEW BUSINESS</p>
-<p class="text-sm leading-relaxed">新規事業開発支援、起業家支援</p>
+  <p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">NEW BUSINESS & STARTUP</p>
+  <h3 class="font-display text-base text-[var(--ink)] mb-1.5">新規事業・起業家支援</h3>
+  <p class="text-sm leading-relaxed text-[var(--ink-dim)]">ゼロイチの事業立ち上げにおける仮説検証やビジネスモデルの構築支援、シード・アーリー期の起業家へのメンタリングなど、事業創出の土台づくりをご支援します。</p>
 </div>
-<div class="link-btn rounded-xl p-5">
-<p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">HR / ORGANIZATION</p>
-<p class="text-sm leading-relaxed">採用支援、組織開発支援</p>
-</div>
-<div class="link-btn rounded-xl p-5">
-<p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">SOCIAL IMPACT</p>
-<p class="text-sm leading-relaxed">障害者雇用支援、社会課題解決事業支援</p>
-</div>
+
 <div class="link-btn rounded-xl p-5 sm:col-span-2">
-<p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">DIGITAL IDENTITY / eKYC</p>
-<p class="text-sm leading-relaxed">デジタルID / eKYC関連コンサルティング</p>
+  <p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">HR / ORGANIZATION</p>
+  <h3 class="font-display text-base text-[var(--ink)] mb-1.5">採用・組織開発</h3>
+  <p class="text-sm leading-relaxed text-[var(--ink-dim)]">事業の成長を止めないための採用戦略の策定や、カルチャーの浸透施策。多様なバックグラウンドを持つメンバーが、本来の力を発揮できる組織づくりをサポートします。</p>
 </div>
+
+<!-- 専門領域（サブ的に打ち出す武器） -->
+<div class="mt-4 mb-2 sm:col-span-2 flex items-center gap-4 opacity-80">
+  <span class="w-8 h-px bg-[var(--line)]"></span>
+  <span class="text-xs text-[var(--ink-dim)] tracking-widest">SPECIALTIES</span>
+  <span class="flex-1 h-px bg-[var(--line)]"></span>
+</div>
+
+<div class="link-btn rounded-xl p-5">
+  <p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">DIGITAL IDENTITY / eKYC</p>
+  <h3 class="font-display text-base text-[var(--ink)] mb-1.5">デジタル認証コンサルティング</h3>
+  <p class="text-sm leading-relaxed text-[var(--ink-dim)]">マイナンバーカードを活用した本人確認（マイナアプリ等）をはじめ、最新のデジタルID技術を自社サービスにどう組み込むか。行政・民間の両視点から最適解をご提案し、実装を支援します。</p>
+</div>
+
+<div class="link-btn rounded-xl p-5">
+  <p class="text-[var(--red)] text-xs tracking-wider-jp mb-2">SOCIAL IMPACT</p>
+  <h3 class="font-display text-base text-[var(--ink)] mb-1.5">社会課題解決・D&I推進</h3>
+  <p class="text-sm leading-relaxed text-[var(--ink-dim)]">障害者雇用支援や、社会課題をビジネスで解決するための事業設計。単なるCSR活動に留まらない、事業成長と直結するソーシャルインパクトの創出をお手伝いします。</p>
+</div>
+
 </div>
 </section>
 
