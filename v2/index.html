@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,16 @@
             <a href="#" class="font-bold text-xl tracking-tight text-white flex items-center gap-2">
                 <span class="w-2.5 h-2.5 bg-accent-red rounded-full inline-block"></span>Liminoid
             </a>
-            <a href="#contact" class="text-xs font-semibold bg-accent-red text-white px-4 py-2 rounded transition">
+            
+            <!-- カテゴリジャンプナビゲーション -->
+            <nav class="hidden md:flex items-center gap-6 text-xs text-zinc-400 font-medium">
+                <a href="#issues" class="hover:text-white transition">Issues</a>
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#services" class="hover:text-white transition">Services & Plans</a>
+                <a href="#profile" class="hover:text-white transition">Profile</a>
+            </nav>
+
+            <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold bg-accent-red text-white px-4 py-2 rounded transition">
                 まずは気軽に相談
             </a>
         </div>
@@ -46,7 +55,7 @@
                 戦略の策定にとどまらず、営業プロセスの構築から業務のオペレーション化まで。リソース不足や仕組み化に課題を抱える個人事業主・事業者の「右腕」として、現場に伴走し成果に繋げます。
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" class="inline-flex justify-center items-center bg-accent-red text-white font-medium text-sm px-6 py-3.5 rounded transition">
+                <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-accent-red text-white font-medium text-sm px-6 py-3.5 rounded transition">
                     まずは気軽に相談してみる
                 </a>
                 <a href="./profile.html" class="inline-flex justify-center items-center bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 text-zinc-300 font-medium text-sm px-6 py-3.5 rounded transition">
@@ -56,7 +65,7 @@
         </section>
 
         <!-- Issues -->
-        <section class="py-20 border-b border-custom">
+        <section id="issues" class="py-20 border-b border-custom scroll-mt-16">
             <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3">Issues</h2>
             <p class="text-xl font-bold text-white mb-8">このような課題に応えます</p>
             
@@ -77,7 +86,7 @@
         </section>
 
         <!-- Features -->
-        <section class="py-20 border-b border-custom">
+        <section id="features" class="py-20 border-b border-custom scroll-mt-16">
             <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3">Features</h2>
             <p class="text-xl font-bold text-white mb-10">Liminoidが提供する価値</p>
 
@@ -115,7 +124,7 @@
         </section>
 
         <!-- Services & Plans -->
-        <section class="py-20 border-b border-custom">
+        <section id="services" class="py-20 border-b border-custom scroll-mt-16">
             <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3">Services & Plans</h2>
             <p class="text-xl font-bold text-white mb-2">支援プラン・料金の目安</p>
             <p class="text-xs text-zinc-400 mb-8">※表示料金はあくまで目安です。ご予算やご相談内容に合わせて柔軟に対応いたします。</p>
@@ -155,7 +164,7 @@
         </section>
 
         <!-- Profile -->
-        <section class="py-20 border-b border-custom">
+        <section id="profile" class="py-20 border-b border-custom scroll-mt-16">
             <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3">Profile</h2>
             <div class="p-8 bg-custom-card border border-custom rounded-lg">
                 <div class="flex flex-col sm:flex-row items-start gap-6">
@@ -166,7 +175,7 @@
                             デジタル庁、株式会社Ridilover、株式会社TRUSTDOCKなどでBizDev（事業開発）やオペレーション構築を経験。個人事業主や小規模事業者の「実行力不足」を補い、事業成長に繋げる伴走支援を行っています。
                         </p>
                         <a href="./profile.html" class="inline-flex items-center text-xs font-semibold text-accent-red hover:underline transition">
-                            補助するビジネスコンサルタントの実績やプロフィールはこちら &rarr;
+                            代表・松崎の詳しい実績や経歴はこちら &rarr;
                         </a>
                     </div>
                 </div>
@@ -174,14 +183,14 @@
         </section>
 
         <!-- Contact CTA -->
-        <section id="contact" class="py-24 text-center">
+        <section id="contact" class="py-24 text-center scroll-mt-16">
             <h2 class="text-2xl font-bold text-white mb-4">まずは気軽にご相談ください</h2>
             <p class="text-sm text-zinc-400 leading-relaxed mb-8 max-w-xl mx-auto">
                 「どう相談すればいいかも迷う」という方でも、どうぞご安心ください。<br>
                 メール・オンライン会議など、ご希望の手段に合わせて対応いたします。<br>
                 まずは下記のお問い合わせフォームより、お気軽にご一報ください。
             </p>
-            <a href="#" class="inline-block bg-accent-red text-white font-medium text-sm px-8 py-4 rounded transition">
+            <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent-red text-white font-medium text-sm px-8 py-4 rounded transition">
                 お問い合わせフォームへ
             </a>
         </section>
@@ -191,7 +200,7 @@
     <!-- Footer -->
     <footer class="border-t border-custom py-8 bg-black">
         <div class="max-w-4xl mx-auto px-6 text-center text-xs text-zinc-500">
-            &copy; 2026 Liminoid. All rights reserved.
+            &copy; Liminoid All Rights Reserved.
         </div>
     </footer>
 
