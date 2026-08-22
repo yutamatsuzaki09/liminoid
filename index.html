@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liminoid | 事業開発・オペレーション伴走パートナー</title>
+    <meta name="description" content="Liminoidは、個人事業主・小規模事業者の事業開発と業務仕組み化を伴走支援するBizDev＆オペレーションパートナーです。営業プロセスの構築から現場のオペレーション化まで、実行力不足を補い事業成長に繋げます。">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
@@ -36,7 +37,7 @@
                 <a href="#profile" class="hover:text-white transition">Profile</a>
             </nav>
 
-            <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold bg-accent-red text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded transition">
+            <a href="#contact" class="text-xs font-semibold bg-accent-red text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded transition">
                 まずは気軽に相談
             </a>
         </div>
@@ -66,7 +67,7 @@
                         戦略の策定にとどまらず、営業プロセスの構築から業務のオペレーション化まで。リソース不足や仕組み化に課題を抱える個人事業主・事業者の「右腕」として、現場に伴走し成果に繋げます。
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-accent-red text-white font-medium text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded transition shadow-lg shadow-red-900/30">
+                        <a href="#contact" class="inline-flex justify-center items-center bg-accent-red text-white font-medium text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded transition shadow-lg shadow-red-900/30">
                             まずは気軽に相談してみる
                         </a>
                         <a href="./profile.html" class="inline-flex justify-center items-center bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-300 font-medium text-xs sm:text-sm px-5 sm:px-6 py-3.5 sm:py-4 rounded transition backdrop-blur-sm">
@@ -206,12 +207,34 @@
                 <h2 class="text-xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">まずは気軽にご相談ください</h2>
                 <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto">
                     「どう相談すればいいかも迷う」という方でも、どうぞご安心ください。<br>
-                    メール・オンライン会議など、ご希望の手段に合わせて対応いたします。<br>
-                    まずは下記のお問い合わせフォームより、お気軽にご一報ください。
+                    下記フォームからそのままご記入いただけます。フォームが開きにくい場合や、メールの方が早い場合は、下のボタンからご連絡ください。
                 </p>
-                <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent-red text-white font-medium text-xs sm:text-sm px-8 sm:px-10 py-3.5 sm:py-4 rounded transition shadow-lg shadow-red-900/20">
-                    お問い合わせフォームへ
-                </a>
+
+                <!-- 低ハードルCTA：メール直送 / 別タブ表示 -->
+                <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+                    <a href="mailto:yuta.matsuzaki@liminoid.net?subject=Liminoid%E3%81%B8%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E3%83%BB%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A%E3%83%BB%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E3%81%94%E9%80%A3%E7%B5%A1%E6%89%8B%E6%AE%B5%EF%BC%9A%0D%0A" class="inline-flex justify-center items-center bg-accent-red text-white font-medium text-xs sm:text-sm px-8 sm:px-10 py-3.5 sm:py-4 rounded transition shadow-lg shadow-red-900/20">
+                        メールで相談する
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIhC3uU81O7S1920A4oGcMVbda0xGIZozv6_M5hZu2JA155Q/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-300 font-medium text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded transition">
+                        別タブでフォームを開く
+                    </a>
+                </div>
+
+                <!-- 埋め込みフォーム（ページ遷移なしでそのまま入力可能） -->
+                <div class="max-w-2xl mx-auto bg-custom-card border border-custom rounded-lg overflow-hidden">
+                    <div class="border-b border-custom bg-zinc-900/60 px-5 sm:px-6 py-3 sm:py-4 flex items-center gap-2.5 text-left">
+                        <span class="w-2 h-2 bg-accent-red rounded-full inline-block shrink-0"></span>
+                        <p class="text-xs sm:text-sm font-semibold text-zinc-200 tracking-wide">お問い合わせフォーム</p>
+                    </div>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdIhC3uU81O7S1920A4oGcMVbda0xGIZozv6_M5hZu2JA155Q/viewform?embedded=true"
+                        title="Liminoid 問い合わせフォーム"
+                        class="w-full"
+                        style="height: 1100px; border: 0;"
+                        loading="lazy">
+                        読み込んでいます…
+                    </iframe>
+                </div>
             </section>
 
         </div>
