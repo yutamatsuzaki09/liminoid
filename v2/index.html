@@ -4,7 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liminoid | 事業開発・オペレーション伴走パートナー</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Liminoidは、個人事業主・小規模事業者の事業開発と業務仕組み化を伴走支援するBizDev＆オペレーションパートナーです。営業プロセスの構築から現場のオペレーション化まで、実行力不足を補い事業成長に繋げます。">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://liminoid.net/">
+
+    <!-- OGP -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Liminoid">
+    <meta property="og:title" content="Liminoid | 事業開発・オペレーション伴走パートナー">
+    <meta property="og:description" content="個人事業主・小規模事業者の事業開発と業務仕組み化を伴走支援するBizDev＆オペレーションパートナー。営業プロセスの構築から現場のオペレーション化まで、実行力不足を補い事業成長に繋げます。">
+    <meta property="og:url" content="https://liminoid.net/">
+    <meta property="og:image" content="https://liminoid.net/hero-bg.png">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Liminoid | 事業開発・オペレーション伴走パートナー">
+    <meta name="twitter:description" content="個人事業主・小規模事業者の事業開発と業務仕組み化を伴走支援するBizDev＆オペレーションパートナー。">
+    <meta name="twitter:image" content="https://liminoid.net/hero-bg.png">
+
+    <!-- 構造化データ（Organization + Person） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Liminoid",
+      "url": "https://liminoid.net/",
+      "description": "個人事業主・小規模事業者の事業開発と業務仕組み化を伴走支援するBizDev＆オペレーションパートナー。",
+      "areaServed": "JP",
+      "email": "yuta.matsuzaki@liminoid.net",
+      "founder": {
+        "@type": "Person",
+        "name": "松崎雄汰",
+        "alternateName": "Yuta Matsuzaki",
+        "jobTitle": "ビジネスコンサルタント / BizDevパートナー",
+        "url": "https://liminoid.net/profile.html",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Liminoid"
+        }
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="./styles.css">
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
@@ -21,176 +64,244 @@
 </head>
 <body class="antialiased selection:bg-red-600 selection:text-white">
 
-    <!-- Header (PCでは1280pxまでワイドに拡張) -->
+    <!-- Header -->
     <header class="bg-black/90 backdrop-blur-md border-b border-custom sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="#" class="font-bold text-xl tracking-tight text-white flex items-center gap-2">
                 <span class="w-2.5 h-2.5 bg-accent-red rounded-full inline-block"></span>Liminoid
             </a>
-            
-            <!-- カテゴリジャンプナビゲーション -->
+
             <nav class="hidden md:flex items-center gap-8 text-xs text-zinc-400 font-medium">
                 <a href="#issues" class="hover:text-white transition">Issues</a>
                 <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#scope" class="hover:text-white transition">Scope of Work</a>
                 <a href="#services" class="hover:text-white transition">Services & Plans</a>
                 <a href="#profile" class="hover:text-white transition">Profile</a>
             </nav>
 
-            <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold bg-accent-red text-white px-5 py-2.5 rounded transition">
-                まずは気軽に相談
+            <a href="#contact" class="text-xs font-semibold bg-accent-red text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded transition">
+                相談する
             </a>
         </div>
     </header>
 
     <main class="w-full">
 
-        <!-- Hero (フルウィズ・ダイナミックKV) -->
-        <section class="relative w-full min-h-[520px] md:min-h-[600px] flex items-center border-b border-custom overflow-hidden">
-            <!-- KV背景画像 (全幅表示 ＋ 画像の明るさを活かす薄型グラデーション) -->
-            <div class="absolute inset-0 z-0">
-                <img src="./hero-bg.png" alt="Liminoid Key Visual" class="w-full h-full object-cover object-center sm:object-right opacity-75 filter contrast-105">
-                <!-- 文字の可読性を保ちつつ画像の右側・夕景を見せるグラデーション -->
-                <div class="absolute inset-0 bg-gradient-to-r from-[#09090b] via-[#09090b]/80 md:via-[#09090b]/60 to-transparent"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-[#09090b]/40"></div>
+        <!-- Hero（メインコピーは現行維持／サブコピーで課題訴求を追加） -->
+        <section class="relative w-full min-h-[380px] sm:min-h-[520px] md:min-h-[600px] flex items-center border-b border-custom overflow-hidden">
+            <div class="absolute inset-0 z-0 bg-[#09090b]">
+                <img src="./hero-bg.png" alt="Liminoid Key Visual" class="w-full h-full object-contain sm:object-cover object-center sm:object-right opacity-95 sm:opacity-80 filter contrast-105">
+                <div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#09090b] via-[#09090b]/70 sm:via-[#09090b]/80 md:via-[#09090b]/60 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#09090b]/50 sm:from-[#09090b]/60 via-transparent to-[#09090b]"></div>
             </div>
 
-            <!-- Heroコンテンツ (PC/SP自動最適化) -->
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 md:py-24">
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-20 md:py-24">
                 <div class="max-w-2xl">
-                    <p class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-4">BizDev & Operations Partner</p>
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+                    <p class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3 sm:mb-4">BizDev & Operations Partner</p>
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-snug sm:leading-tight mb-4 sm:mb-6">
                         社会を良くすることも、<br class="hidden sm:inline">事業を伸ばすことも。<br>
                         一緒に考え、かたちにする。
                     </h1>
-                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-10">
-                        戦略の策定にとどまらず、営業プロセスの構築から業務のオペレーション化まで。リソース不足や仕組み化に課題を抱える個人事業主・事業者の「右腕」として、現場に伴走し成果に繋げます。
+                    <p class="text-zinc-300 text-xs sm:text-base leading-relaxed mb-8 sm:mb-10">
+                        「新規施策や事業拡張に手を回したいのに、目の前の実務で1日が終わってしまう」——そんな個人事業主・事業者の「右腕」として、戦略の策定にとどまらず、営業プロセスの構築から業務のオペレーション化まで現場に伴走し、成果に繋げます。
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-accent-red text-white font-medium text-sm px-8 py-4 rounded transition shadow-lg shadow-red-900/30">
-                            まずは気軽に相談してみる
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="#contact" class="inline-flex justify-center items-center bg-accent-red text-white font-medium text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded transition shadow-lg shadow-red-900/30">
+                            相談する
                         </a>
-                        <a href="./profile.html" class="inline-flex justify-center items-center bg-zinc-900/80 border border-zinc-700 hover:bg-zinc-800 text-zinc-300 font-medium text-sm px-6 py-4 rounded transition backdrop-blur-sm">
-                            代表・松崎の詳しい実績や経歴はこちら &rarr;
+                        <a href="./profile.html" class="inline-flex justify-center items-center bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-300 font-medium text-xs sm:text-sm px-5 sm:px-6 py-3.5 sm:py-4 rounded transition backdrop-blur-sm">
+                            代表・松崎の実績を見る &rarr;
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- コンテンツエリア (表示幅を1150pxクラスへ拡張) -->
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Issues -->
-            <section id="issues" class="py-20 border-b border-custom scroll-mt-16">
-                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3">Issues</h2>
-                <p class="text-2xl font-bold text-white mb-10">このような課題に応えます</p>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="p-8 bg-custom-card border border-custom rounded-lg">
-                        <span class="text-xs font-mono text-accent-red block mb-3">01</span>
-                        <p class="text-base font-semibold text-zinc-200 leading-snug">手元の業務に追われ、新規施策や事業拡張に手が回らない</p>
+            <section id="issues" class="py-12 sm:py-20 border-b border-custom scroll-mt-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-2 sm:mb-3">Issues</h2>
+                <p class="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-10">こんな状況になっていませんか？</p>
+
+                <div class="grid md:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="p-5 sm:p-8 bg-custom-card border border-custom rounded-lg">
+                        <span class="text-xs font-mono text-accent-red block mb-2 sm:mb-3">01 / リソース不足</span>
+                        <p class="text-sm sm:text-base font-semibold text-zinc-200 leading-snug mb-2">手元の実務に追われ、新規事業や施策に手が回らない</p>
+                        <p class="text-xs text-zinc-400 leading-relaxed">既存対応で手一杯になり、中長期の成長施策や営業の仕組み化が後回しになっている。</p>
                     </div>
-                    <div class="p-8 bg-custom-card border border-custom rounded-lg">
-                        <span class="text-xs font-mono text-accent-red block mb-3">02</span>
-                        <p class="text-base font-semibold text-zinc-200 leading-snug">営業・顧客管理・ツール運用の仕組みがなく、属人化している</p>
+                    <div class="p-5 sm:p-8 bg-custom-card border border-custom rounded-lg">
+                        <span class="text-xs font-mono text-accent-red block mb-2 sm:mb-3">02 / 属人化・カオス</span>
+                        <p class="text-sm sm:text-base font-semibold text-zinc-200 leading-snug mb-2">顧客管理や業務フローがなく、自分が全部抱えている</p>
+                        <p class="text-xs text-zinc-400 leading-relaxed">情報が個人のSlackやスプレッドシートに散らばり、人に任せられない状態が続いている。</p>
                     </div>
-                    <div class="p-8 bg-custom-card border border-custom rounded-lg">
-                        <span class="text-xs font-mono text-accent-red block mb-3">03</span>
-                        <p class="text-base font-semibold text-zinc-200 leading-snug">アドバイスだけでなく、一緒に手を動かして現場を整えてほしい</p>
+                    <div class="p-5 sm:p-8 bg-custom-card border border-custom rounded-lg">
+                        <span class="text-xs font-mono text-accent-red block mb-2 sm:mb-3">03 / 実行力の壁</span>
+                        <p class="text-sm sm:text-base font-semibold text-zinc-200 leading-snug mb-2">助言だけでなく、一緒に手を動かして整えてほしい</p>
+                        <p class="text-xs text-zinc-400 leading-relaxed">コンサルタントの「提案」だけでは現場が回らない。実際の資料作成やツール構築までやってほしい。</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Features -->
-            <section id="features" class="py-20 border-b border-custom scroll-mt-16">
-                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3">Features</h2>
-                <p class="text-2xl font-bold text-white mb-12">Liminoidが提供する価値</p>
+            <!-- Features（現行版から復活：Liminoidらしさの核） -->
+            <section id="features" class="py-12 sm:py-20 border-b border-custom scroll-mt-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-2 sm:mb-3">Features</h2>
+                <p class="text-xl sm:text-2xl font-bold text-white mb-8 sm:mb-12">Liminoidが提供する価値</p>
 
-                <div class="space-y-6">
-                    <div class="p-8 bg-custom-card border border-custom rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div class="space-y-4 sm:space-y-6">
+                    <div class="p-5 sm:p-8 bg-custom-card border border-custom rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-6">
                         <div class="md:w-1/3">
                             <span class="text-xs font-mono text-accent-red">FEATURE 01</span>
-                            <h3 class="text-lg font-bold text-white mt-1">実務に踏み込む実行型サポート</h3>
+                            <h3 class="text-base sm:text-lg font-bold text-white mt-1">実務に踏み込む実行型サポート</h3>
                         </div>
-                        <p class="md:w-2/3 text-sm text-zinc-400 leading-relaxed">
+                        <p class="md:w-2/3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
                             提案だけで終わらせず、営業資料の作成、業務フローの整理、ITツールの設定まで泥臭く実行。現場が回る仕組みを完成させます。
                         </p>
                     </div>
 
-                    <div class="p-8 bg-custom-card border border-custom rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="p-5 sm:p-8 bg-custom-card border border-custom rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-6">
                         <div class="md:w-1/3">
                             <span class="text-xs font-mono text-accent-red">FEATURE 02</span>
-                            <h3 class="text-lg font-bold text-white mt-1">社会課題解決 × ビジネス設計</h3>
+                            <h3 class="text-base sm:text-lg font-bold text-white mt-1">社会課題解決 × ビジネス設計</h3>
                         </div>
-                        <p class="md:w-2/3 text-sm text-zinc-400 leading-relaxed">
+                        <p class="md:w-2/3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
                             社会課題解決やソーシャル領域での事業創出・グロースのノウハウや支援実績に基づき、「社会的価値はあるがマネタイズが難しい」事業の収益構造の構築を強みとします。
                         </p>
                     </div>
 
-                    <div class="p-8 bg-custom-card border border-custom rounded-lg flex flex-col md:flex-row md:items-start justify-between gap-6">
+                    <div class="p-5 sm:p-8 bg-custom-card border border-custom rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-6">
                         <div class="md:w-1/3">
                             <span class="text-xs font-mono text-accent-red">FEATURE 03</span>
-                            <h3 class="text-base font-bold text-white mt-1">官民の最前線で培った知見</h3>
+                            <h3 class="text-base sm:text-lg font-bold text-white mt-1">官民の最前線で培った知見</h3>
                         </div>
-                        <p class="md:w-2/3 text-sm text-zinc-400 leading-relaxed">
+                        <p class="md:w-2/3 text-xs sm:text-sm text-zinc-400 leading-relaxed">
                             中央官庁やベンチャー・スタートアップで培ったガバナンスとスピード感を、スモールビジネスの最適サイズに落とし込んで適用します。
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Services & Plans -->
-            <section id="services" class="py-20 border-b border-custom scroll-mt-16">
-                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3">Services & Plans</h2>
-                <p class="text-2xl font-bold text-white mb-2">支援プラン・料金の目安</p>
-                <p class="text-xs text-zinc-400 mb-8">※表示料金はあくまで目安です。ご予算やご相談内容に合わせて柔軟に対応いたします。</p>
+            <!-- Scope of Work（改善案から採用：具体的な実務範囲） -->
+            <section id="scope" class="py-12 sm:py-20 border-b border-custom scroll-mt-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-2 sm:mb-3">Scope of Work</h2>
+                <p class="text-xl sm:text-2xl font-bold text-white mb-2">泥臭く「実際に手を動かせる」実務範囲</p>
+                <p class="text-xs text-zinc-400 mb-8">机上の空論ではなく、現場がスムーズに回る仕組みを直接作成・構築します。</p>
 
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm border-collapse bg-custom-card border border-custom rounded-lg overflow-hidden">
+                <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                    <div class="p-6 bg-custom-card border border-custom rounded-lg">
+                        <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-accent-red rounded-full"></span>営業・BizDev基盤の構築
+                        </h3>
+                        <ul class="text-xs sm:text-sm text-zinc-400 space-y-2 list-disc list-inside leading-relaxed">
+                            <li>営業提案書・サービス紹介資料のブラッシュアップ</li>
+                            <li>商談〜受注までのプロセス整理とテンプレート化</li>
+                            <li>新規事業・実証実験の仮説検証シート作成</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-custom-card border border-custom rounded-lg">
+                        <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-accent-red rounded-full"></span>業務オペレーション化・IT導入
+                        </h3>
+                        <ul class="text-xs sm:text-sm text-zinc-400 space-y-2 list-disc list-inside leading-relaxed">
+                            <li>Notion / Google Workspace による情報整理・ナレッジ管理</li>
+                            <li>kintone / Salesforce / HubSpotなど CRM・MAツールを活用した顧客管理・業務の仕組み化</li>
+                            <li>業務フローの可視化（Figma / マニュアル作成）</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Free Consultation（専用ブロック：料金表の「初回無料」とは役割分担で併存） -->
+            <section id="free-consultation" class="py-12 sm:py-16 border-b border-custom scroll-mt-16">
+                <div class="p-8 sm:p-12 bg-gradient-to-br from-zinc-900 via-zinc-900 to-red-950/40 border border-red-900/50 rounded-2xl text-center">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-2 inline-block">Free Consultation</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">まずは無料相談で、頭の中を整理してみませんか？</h2>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-xl mx-auto mb-8">
+                        「何から手をつければいいか分からない」という段階でも構いません。60分ほど現在の状況を伺い、課題の優先順位とネクストアクションを一緒に整理します。強引なご提案や営業は行いませんので、話を聞いてみるだけでも歓迎です。通常有料でご案内している初回相談ですが、まずは気軽にお試しいただけるよう無料でご案内しています（他の支援プランと合わせた料金の目安は下記でご確認いただけます）。
+                    </p>
+                    <a href="#contact" class="inline-block bg-accent-red text-white font-medium text-xs sm:text-sm px-10 py-4 rounded transition shadow-lg shadow-red-900/40">
+                        無料相談を申し込む
+                    </a>
+                </div>
+            </section>
+
+            <!-- Services & Plans -->
+            <section id="services" class="py-12 sm:py-20 border-b border-custom scroll-mt-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-2 sm:mb-3">Services & Plans</h2>
+                <p class="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2">支援プラン・料金の目安</p>
+                <p class="text-xs text-zinc-400 mb-6 sm:mb-8">※表示料金はあくまで目安です。ご予算やご相談内容に合わせて柔軟に対応いたします。</p>
+
+                <div class="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+                    <table class="w-full min-w-[600px] sm:min-w-full text-left text-xs sm:text-sm border-collapse bg-custom-card border border-custom rounded-lg overflow-hidden">
                         <thead>
                             <tr class="bg-zinc-800/80 text-zinc-200 border-b border-zinc-700 font-semibold">
-                                <th class="p-5">プラン名</th>
-                                <th class="p-5">内容</th>
-                                <th class="p-5">対象</th>
-                                <th class="p-5 text-right">料金目安</th>
+                                <th class="p-3.5 sm:p-5">プラン名</th>
+                                <th class="p-3.5 sm:p-5">内容・対応範囲の例</th>
+                                <th class="p-3.5 sm:p-5">対象</th>
+                                <th class="p-3.5 sm:p-5 text-right">料金目安</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-zinc-800 text-zinc-300">
                             <tr>
-                                <td class="p-5 font-bold text-white whitespace-nowrap">スポット壁打ち</td>
-                                <td class="p-5 text-zinc-400">単発のご相談（課題抽出・ネクストアクションの整理）</td>
-                                <td class="p-5 text-zinc-400">課題の優先順位を整理したい方</td>
-                                <td class="p-5 text-right font-medium whitespace-nowrap">
+                                <td class="p-3.5 sm:p-5 font-bold text-white whitespace-nowrap">スポット壁打ち</td>
+                                <td class="p-3.5 sm:p-5 text-zinc-400">単発のご相談（課題抽出・優先順位整理・ネクストアクションの整理）</td>
+                                <td class="p-3.5 sm:p-5 text-zinc-400">課題の優先順位を整理したい方</td>
+                                <td class="p-3.5 sm:p-5 text-right font-medium whitespace-nowrap">
                                     <span class="text-accent-red font-bold">初回無料</span><br>
-                                    <span class="text-xs text-zinc-400">（通常 ￥20,000）</span>
+                                    <span class="text-[10px] sm:text-xs text-zinc-400">（通常 ￥20,000）</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="p-5 font-bold text-white whitespace-nowrap">仕組み化プロジェクト</td>
-                                <td class="p-5 text-zinc-400">業務フロー整理・営業基盤の作成（1〜2ヶ月集中）</td>
-                                <td class="p-5 text-zinc-400">短い期間で業務負担を減らし仕組み化したい方</td>
-                                <td class="p-5 text-right font-medium whitespace-nowrap">￥150,000〜</td>
+                                <td class="p-3.5 sm:p-5 font-bold text-white whitespace-nowrap">仕組み化プロジェクト</td>
+                                <td class="p-3.5 sm:p-5 text-zinc-400">1〜2ヶ月集中（業務フロー設計・CRM初期構築・営業資料作成）</td>
+                                <td class="p-3.5 sm:p-5 text-zinc-400">短い期間で業務負担を減らし仕組み化したい方</td>
+                                <td class="p-3.5 sm:p-5 text-right font-medium whitespace-nowrap">￥150,000〜</td>
                             </tr>
                             <tr>
-                                <td class="p-5 font-bold text-white whitespace-nowrap">月額伴走型パートナー</td>
-                                <td class="p-5 text-zinc-400">定期ミーティング＋チャット相談＋各種実務・現場支援</td>
-                                <td class="p-5 text-zinc-400">右腕として継続的に事業を伸ばしたい方</td>
-                                <td class="p-5 text-right font-medium whitespace-nowrap">￥100,000〜 / 月</td>
+                                <td class="p-3.5 sm:p-5 font-bold text-white whitespace-nowrap">月額伴走型パートナー</td>
+                                <td class="p-3.5 sm:p-5 text-zinc-400">定例MTG＋チャット相談＋各種実務・現場支援（資料改善・ツール構築）</td>
+                                <td class="p-3.5 sm:p-5 text-zinc-400">継続的に事業成長のサポートをしてほしい方</td>
+                                <td class="p-3.5 sm:p-5 text-right font-medium whitespace-nowrap">￥100,000〜 / 月</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
+            <!-- Process（改善案から採用：心理的ハードルを下げる3ステップ） -->
+            <section id="flow" class="py-12 sm:py-20 border-b border-custom scroll-mt-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-2 sm:mb-3">Process</h2>
+                <p class="text-xl sm:text-2xl font-bold text-white mb-8">ご相談の流れ（3ステップ）</p>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-custom-card border border-custom rounded-lg">
+                        <span class="text-xs font-mono text-accent-red block mb-2">STEP 01</span>
+                        <h3 class="text-base font-bold text-white mb-2">フォームから簡易ご連絡</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed">お名前と連絡先、簡単な相談内容（「整理できていない」状態でも可）を入力してください。</p>
+                    </div>
+                    <div class="p-6 bg-custom-card border border-custom rounded-lg">
+                        <span class="text-xs font-mono text-accent-red block mb-2">STEP 02</span>
+                        <h3 class="text-base font-bold text-white mb-2">初回オンライン無料相談</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed">60分で現状を詳しくヒアリングし、課題の優先順位と今やるべきことを整理します。</p>
+                    </div>
+                    <div class="p-6 bg-custom-card border border-custom rounded-lg">
+                        <span class="text-xs font-mono text-accent-red block mb-2">STEP 03</span>
+                        <h3 class="text-base font-bold text-white mb-2">ご提案・伴走スタート</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed">必要に応じて具体的な支援プランをご提示します。ご納得いただいた場合のみ伴走を開始します。</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- Profile -->
-            <section id="profile" class="py-20 border-b border-custom scroll-mt-16">
-                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-3">Profile</h2>
-                <div class="p-8 sm:p-10 bg-custom-card border border-custom rounded-lg">
-                    <div class="flex flex-col sm:flex-row items-start gap-6">
+            <section id="profile" class="py-12 sm:py-20 border-b border-custom scroll-mt-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-accent-red mb-2 sm:mb-3">Profile</h2>
+                <div class="p-5 sm:p-8 md:p-10 bg-custom-card border border-custom rounded-lg">
+                    <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                         <div>
-                            <h3 class="text-xl font-bold text-white">松崎 雄汰 <span class="text-xs font-normal text-zinc-400 ml-2">Yuta Matsuzaki</span></h3>
-                            <p class="text-xs text-accent-red mt-1 mb-4">ビジネスコンサルタント / BizDevパートナー</p>
-                            <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+                            <h3 class="text-lg sm:text-xl font-bold text-white">松崎 雄汰 <span class="text-xs font-normal text-zinc-400 ml-2">Yuta Matsuzaki</span></h3>
+                            <p class="text-xs text-accent-red mt-1 mb-3 sm:mb-4">ビジネスコンサルタント / BizDevパートナー</p>
+                            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-5 sm:mb-6">
                                 デジタル庁、株式会社Ridilover、株式会社TRUSTDOCK、株式会社D&Iなどで、ブランディング・PR、事業開発・BizDev、プロダクト企画、マーケティング、セールス、カスタマーサクセス等、事業を推進・グロースさせることやオペレーション構築・改善も担当。個人事業主や小規模事業者の「実行力不足」を補い、事業成長に繋げる伴走支援を行っています。
                             </p>
                             <a href="./profile.html" class="inline-flex items-center text-xs font-semibold text-accent-red hover:underline transition">
@@ -201,17 +312,37 @@
                 </div>
             </section>
 
-            <!-- Contact CTA -->
-            <section id="contact" class="py-24 text-center scroll-mt-16">
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">まずは気軽にご相談ください</h2>
-                <p class="text-sm text-zinc-400 leading-relaxed mb-8 max-w-xl mx-auto">
-                    「どう相談すればいいかも迷う」という方でも、どうぞご安心ください。<br>
-                    メール・オンライン会議など、ご希望の手段に合わせて対応いたします。<br>
-                    まずは下記のお問い合わせフォームより、お気軽にご一報ください。
+            <!-- Contact CTA（現行版の三重導線に復元：mailto＋埋め込みフォーム＋別タブ） -->
+            <section id="contact" class="py-16 sm:py-24 text-center scroll-mt-16">
+                <h2 class="text-xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">まずは気軽にご相談ください</h2>
+                <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto">
+                    「どう相談すればいいかも迷う」という方でも、どうぞご安心ください。強引な営業や勧誘は一切ありません。<br>
+                    下記フォームからそのままご記入いただけます。フォームが開きにくい場合や、メールの方が早い場合は、下のボタンからご連絡ください。
                 </p>
-                <a href="https://forms.gle/Awf1yaKgaGiaw1kh9" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent-red text-white font-medium text-sm px-10 py-4 rounded transition shadow-lg shadow-red-900/20">
-                    お問い合わせフォームへ
-                </a>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+                    <a href="mailto:yuta.matsuzaki@liminoid.net?subject=Liminoid%E3%81%B8%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E3%83%BB%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A%E3%83%BB%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E3%81%94%E9%80%A3%E7%B5%A1%E6%89%8B%E6%AE%B5%EF%BC%9A%0D%0A" class="inline-flex justify-center items-center bg-accent-red text-white font-medium text-xs sm:text-sm px-8 sm:px-10 py-3.5 sm:py-4 rounded transition shadow-lg shadow-red-900/20">
+                        メールで相談する
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIhC3uU81O7S1920A4oGcMVbda0xGIZozv6_M5hZu2JA155Q/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-zinc-900/90 border border-zinc-700 hover:bg-zinc-800 text-zinc-300 font-medium text-xs sm:text-sm px-6 sm:px-8 py-3.5 sm:py-4 rounded transition">
+                        別タブでフォームを開く
+                    </a>
+                </div>
+
+                <div class="max-w-2xl mx-auto bg-custom-card border border-custom rounded-lg overflow-hidden">
+                    <div class="border-b border-custom bg-zinc-900/60 px-5 sm:px-6 py-3 sm:py-4 flex items-center gap-2.5 text-left">
+                        <span class="w-2 h-2 bg-accent-red rounded-full inline-block shrink-0"></span>
+                        <p class="text-xs sm:text-sm font-semibold text-zinc-200 tracking-wide">お問い合わせフォーム</p>
+                    </div>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdIhC3uU81O7S1920A4oGcMVbda0xGIZozv6_M5hZu2JA155Q/viewform?embedded=true"
+                        title="Liminoid 問い合わせフォーム"
+                        class="w-full"
+                        style="height: 1100px; border: 0;"
+                        loading="lazy">
+                        読み込んでいます…
+                    </iframe>
+                </div>
             </section>
 
         </div>
